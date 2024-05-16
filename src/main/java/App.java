@@ -1,4 +1,3 @@
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -31,7 +30,6 @@ public class App {
     public App(){
         ChromeOptions options = new ChromeOptions();
         options.addArguments("start-maximized");
-        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
         driver.get(BASE_URL);
         acceptCookies();
